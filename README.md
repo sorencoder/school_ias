@@ -23,4 +23,11 @@
 - Node.js and npm (or yarn)
 - A database management system (MongoDB)
 
-## Note: Specific database configuration instructions will be provided based on the chosen system.
+ ## Contribution
+**_We welcome contributions to this project. Please follow these guidelines:_**
+**Fork the repository.**
+- Create a new branch for your feature or bug fix.
+- Implement your changes and write unit tests.
+- Submit a pull request for review.
+
+
