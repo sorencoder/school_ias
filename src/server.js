@@ -4,6 +4,7 @@ const bodyParcer = require("body-parser");
 const UserRoutes = require("./routes/user_routes");
 const BooksRoutes = require("./routes/books_routes");
 const StudentRoutes = require("./routes/student_routes");
+const FacultyRoutes = require("./routes/faculty_routes");
 const app = express();
 app.use(bodyParcer.json());
 app.use(bodyParcer.urlencoded({ extended: false }));
@@ -17,6 +18,7 @@ const port = 5000;
 app.use("/api/user", UserRoutes);
 app.use("/api/books", BooksRoutes);
 app.use("/api/students", StudentRoutes);
+app.use("/api/faculty", FacultyRoutes);
 
 app.get("/", (req, res) => {
   res.json({ status: 200, message: "All the system are running" });
