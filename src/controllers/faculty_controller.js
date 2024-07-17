@@ -4,7 +4,7 @@ const FacultyController = {
   facultycreate: async function (req, res) {
     try {
       const data = req.body;
-      const newFaculty = StudentModel(data);
+      const newFaculty = FacultyModel(data);
       await newFaculty.save();
       return res.json({
         status: 200,
@@ -16,7 +16,7 @@ const FacultyController = {
       return res.json({
         status: 500,
         success: false,
-        message: "something went wrong",
+        message: error,
       });
     }
   },
@@ -40,7 +40,7 @@ const FacultyController = {
   deletefaculty: async function (req, res) {
     const facultyId = req.params.id;
     try {
-      const deletefaculty = await StudentModel.deleteOne({ _id: facultyId });
+      const deletefaculty = await FacultyModel.deleteOne({ _id: facultyId });
       if (deletefaculty.deletedCount === 0) {
         return res.status(404).send("Faculty not found");
       }

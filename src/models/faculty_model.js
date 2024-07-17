@@ -28,4 +28,4 @@ FacultySchema.pre(["update", "findOneAndUpdate", "updateOne"], function (next) {
   next();
 });
 
-module.exports = model("Student", FacultySchema);
+module.exports = model("Faculty", FacultySchema);
